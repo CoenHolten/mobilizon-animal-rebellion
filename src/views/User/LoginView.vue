@@ -245,8 +245,17 @@ const { onDone: onCurrentUserMutationDone, mutate: updateCurrentUserMutation } =
 
 onCurrentUserMutationDone(async () => {
   console.debug("Current user mutation done, now setuping actors…");
+  // since we fail to refresh the navbar properly, we force a page reload.
+  // see the explanation of the bug bellow
+  window.location = redirect.value || "/";
   try {
+    /* FIXME this promise never resolved the first time
+      no idea why !
+      this appends even with the last version of apollo-composable (4.0.2)
+      may be related to that : https://github.com/vuejs/apollo/issues/1543
+    */
     const result = await loadIdentities();
+    console.debug("login, loadIdentities resolved");
     if (!result) return;
     await initializeCurrentActor(result.loggedUser.actors);
   } catch (err: any) {
