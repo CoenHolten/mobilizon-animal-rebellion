@@ -31,7 +31,7 @@
           >
           </span>
         </router-link>
-        <o-dropdown position="bottom-left">
+        <o-dropdown position="bottom-right">
           <template #trigger>
             <button
               type="button"
