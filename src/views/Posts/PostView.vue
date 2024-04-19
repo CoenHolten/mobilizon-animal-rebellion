@@ -20,12 +20,14 @@
       <div class="flex justify-center">
         <lazy-image-wrapper :picture="post.picture" />
       </div>
-      <div class="relative flex flex-col">
+      <div class="flex flex-col relative pb-2 bg-white dark:bg-zinc-700 my-4 rounded">
+        <!-- flex flex-col relative pb-2 bg-white dark:bg-zinc-700 my-4 rounded -->
+        
         <div
-          class="px-2 py-3 flex flex-wrap gap-4 justify-center items-center"
+          class="px-2 py-3 flex flex-wrap gap-4 justify-end"
           dir="auto"
         >
-          <div class="flex-auto min-w-[300px] max-w-screen-lg">
+          <div class="flex-1 min-w-[300px]">
             <div class="inline">
               <tag
                 class="mr-2"
@@ -96,6 +98,13 @@
                   })
                 }}
               </span>
+              <router-link
+                v-for="tag in post.tags"
+                :key="tag.title"
+                :to="{ name: RouteName.TAG, params: { tag: tag.title } }"
+              >
+                <tag>{{ tag.title }}</tag>
+              </router-link>
             </p>
           </div>
           <o-dropdown position="bottom-right" aria-role="list">
@@ -207,15 +216,7 @@
       class="px-2 md:px-4 py-4 prose lg:prose-xl prose-p:mt-6 dark:prose-invert bg-white dark:bg-zinc-700 mx-auto"
       :lang="post.language"
     />
-    <section class="flex gap-2 my-6 justify-center" dir="auto">
-      <router-link
-        v-for="tag in post.tags"
-        :key="tag.title"
-        :to="{ name: RouteName.TAG, params: { tag: tag.title } }"
-      >
-        <tag>{{ tag.title }}</tag>
-      </router-link>
-    </section>
+    
     <o-modal
       :close-button-aria-label="t('Close')"
       v-model:active="isReportModalActive"
