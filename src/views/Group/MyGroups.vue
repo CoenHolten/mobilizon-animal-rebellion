@@ -105,7 +105,10 @@ const { result: membershipsResult, loading } = useQuery<{
 }>(LOGGED_USER_MEMBERSHIPS, () => ({
   page: page.value,
   limit,
-}));
+}), {
+  // TODO: figure out why the cache is not up to date
+  fetchPolicy: 'no-cache',
+});
 
 const membershipsPages = computed(
   () =>
