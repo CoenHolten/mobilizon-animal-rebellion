@@ -618,12 +618,13 @@
         </section>
       </div>
       <o-modal
-        v-if="physicalAddress && physicalAddress.geom"
+        v-if="physicalAddress?.geom"
         v-model:active="showMap"
         :close-button-aria-label="t('Close')"
       >
         <div class="map">
           <map-leaflet
+            v-if="showMap"
             :coords="physicalAddress.geom"
             :marker="{
               text: physicalAddress.fullName,
