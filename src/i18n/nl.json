@@ -1509,5 +1509,7 @@
   "{user}'s follow request was rejected": "{user}'s volgverzoek is afgewezen",
   "© The OpenStreetMap Contributors": "© De OpenStreetMap-bijdragers",
   "Search for events or groups": "Zoek naar evenementen of groepen",
+  "If you don't know what to search for, just press 'Search!'": "Als je niet weet waarnaar je moet zoeken, klik je gewoon op 'Zoek!'",
+  "Search!": "Zoek!",
   "City, address, location, etc...": "Stad, adres, locatie, enz..."
 }

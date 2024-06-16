@@ -8,9 +8,13 @@
       t("Keyword, event title, group name, etc.")
     }}</label>    
     <section class="container mx-auto px-2 my-3">
+      <br>
       <b>
       {{t("Search for events or groups")}}
-      </b>
+      </b><br>
+      {{t("If you don't know what to search for, just press 'Search!'")}}
+      <br>
+      <br>
     <div  class= "flex flex-wrap flex-col sm:flex-row items-stretch gap-2 text-center items-center justify-center dark:text-slate-100">
     <o-input
       v-model="search"
@@ -33,8 +37,8 @@
       :placeholder="t('City, address, location, etc...')"
     />
     <o-button native-type="submit" icon-left="magnify">
-      <template v-if="search">{{ t("Go!") }}</template>
-      <template v-else>{{ t("Explore!") }}</template>
+      <template v-if="search">{{ t("Search!") }}</template>
+      <template v-else>{{ t("Search!") }}</template>
     </o-button>
   </div>
   </section>
