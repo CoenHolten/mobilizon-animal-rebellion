@@ -199,7 +199,7 @@ let
 
     codepagex =
       let
-        version = "0.1.9";
+        version = "0.1.6";
       in
       buildMix {
         inherit version;
@@ -208,7 +208,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "codepagex";
-          sha256 = "b7145dd1fdb9fcc33c53e9234040a211b5d46f0fc93d238232e6e72aa5d1c049";
+          sha256 = "1521461097dde281edf084062f525a4edc6a5e49f4fd1f5ec41c9c4955d5bd59";
         };
       };
 

@@ -213,7 +213,7 @@ defmodule Mobilizon.Mixfile do
       {:erlport, "~> 0.11.0"},
       {:tz_world, "~> 1.3"},
       {:tzdata, "~> 1.1"},
-      {:codepagex, "~> 0.1.6"},
+      {:codepagex, "== 0.1.6"},
       {:vite_phx, "~> 0.2.0"},
       {:unplug, "~> 1.0"},
       {:replug, "~> 0.1.0"},
