@@ -38,8 +38,8 @@ mixRelease rec {
             owner = "elixir-cldr";
             repo = "cldr";
             rev = "v${old.version}";
-            sha256 = assert old.version == "2.39.2";
-              "sha256-6g0CAcU0mM+bykjJYdReULXln5Zpxvj26JA+QgJqiJ4=";
+            sha256 = assert old.version == "2.37.5";
+              "sha256-T5Qvuo+xPwpgBsqHNZYnTCA4loToeBn1LKTMsDcCdYs=";
           };
           postInstall = ''
             cp $src/priv/cldr/locales/* $out/lib/erlang/lib/ex_cldr-${old.version}/priv/cldr/locales/

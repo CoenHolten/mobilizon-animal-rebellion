@@ -50,7 +50,7 @@ let
 
     absinthe_phoenix =
       let
-        version = "2.0.3";
+        version = "2.0.2";
       in
       buildMix {
         inherit version;
@@ -59,7 +59,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "absinthe_phoenix";
-          sha256 = "caffaea03c17ea7419fe07e4bc04c2399c47f0d8736900623dbf4749a826fd2c";
+          sha256 = "d36918925c380dc7d2ed7d039c9a3b4182ec36723f7417a68745ade5aab22f8d";
         };
 
         beamDeps = [ absinthe absinthe_plug decimal phoenix phoenix_html phoenix_pubsub ];
@@ -118,7 +118,7 @@ let
 
     bandit =
       let
-        version = "1.5.5";
+        version = "1.2.3";
       in
       buildMix {
         inherit version;
@@ -127,7 +127,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "bandit";
-          sha256 = "f21579a29ea4bc08440343b2b5f16f7cddf2fea5725d31b72cf973ec729079e1";
+          sha256 = "3e29150245a9b5f56944434e5240966e75c917dad248f689ab589b32187a81af";
         };
 
         beamDeps = [ hpax plug telemetry thousand_island websock ];
@@ -182,7 +182,7 @@ let
 
     cldr_utils =
       let
-        version = "2.27.0";
+        version = "2.24.2";
       in
       buildMix {
         inherit version;
@@ -191,7 +191,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "cldr_utils";
-          sha256 = "516f601e28da10b8f1f3af565321c4e3da3b898a0b50a5e5be425eff76d587e1";
+          sha256 = "3362b838836a9f0fa309de09a7127e36e67310e797d556db92f71b548832c7cf";
         };
 
         beamDeps = [ castore certifi decimal ];
@@ -427,7 +427,7 @@ let
 
     ecto_sql =
       let
-        version = "3.11.3";
+        version = "3.11.1";
       in
       buildMix {
         inherit version;
@@ -436,7 +436,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "ecto_sql";
-          sha256 = "e5f36e3d736b99c7fee3e631333b8394ade4bafe9d96d35669fca2d81c2be928";
+          sha256 = "ce14063ab3514424276e7e360108ad6c2308f6d88164a076aac8a387e1fea634";
         };
 
         beamDeps = [ db_connection ecto postgrex telemetry ];
@@ -491,7 +491,7 @@ let
 
     ex_cldr =
       let
-        version = "2.39.2";
+        version = "2.37.5";
       in
       buildMix {
         inherit version;
@@ -500,7 +500,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "ex_cldr";
-          sha256 = "02fd8913ef28d1b2a4190fd8016c2dec1f2291c9ce56c17d7649848c0261a6eb";
+          sha256 = "74ad5ddff791112ce4156382e171a5f5d3766af9d5c4675e0571f081fe136479";
         };
 
         beamDeps = [ cldr_utils decimal gettext jason nimble_parsec ];
@@ -508,7 +508,7 @@ let
 
     ex_cldr_calendars =
       let
-        version = "1.24.2";
+        version = "1.23.0";
       in
       buildMix {
         inherit version;
@@ -517,7 +517,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "ex_cldr_calendars";
-          sha256 = "e8ea1072a83cfb8b59b8bce0f739d3606bd61ba70b895abd5d229512a544e560";
+          sha256 = "06d2407e699032d5cdc515593b7ce7869f10ce28e98a4ed68d9b21e5001036d4";
         };
 
         beamDeps = [ ex_cldr_numbers jason ];
@@ -525,7 +525,7 @@ let
 
     ex_cldr_currencies =
       let
-        version = "2.16.1";
+        version = "2.15.1";
       in
       buildMix {
         inherit version;
@@ -534,7 +534,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "ex_cldr_currencies";
-          sha256 = "095d5e973bf0ee066dd1153990d10cb6fa6d8ff0e028295bdce7a7821c70a0e4";
+          sha256 = "31df8bd37688340f8819bdd770eb17d659652078d34db632b85d4a32864d6a25";
         };
 
         beamDeps = [ ex_cldr jason ];
@@ -542,7 +542,7 @@ let
 
     ex_cldr_dates_times =
       let
-        version = "2.18.0";
+        version = "2.16.0";
       in
       buildMix {
         inherit version;
@@ -551,7 +551,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "ex_cldr_dates_times";
-          sha256 = "a8fbe9e251de892f92748a2a00b5d832dfc2cf9996ffa8dd1fbca7f7659b3d2f";
+          sha256 = "0f2f250d479cadda4e0ef3a5e3d936ae7ba1a3f1199db6791e284e86203495b1";
         };
 
         beamDeps = [ ex_cldr_calendars ex_cldr_numbers jason ];
@@ -576,7 +576,7 @@ let
 
     ex_cldr_numbers =
       let
-        version = "2.33.1";
+        version = "2.32.4";
       in
       buildMix {
         inherit version;
@@ -585,7 +585,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "ex_cldr_numbers";
-          sha256 = "c003bfaa3fdee6bab5195f128b94038c2ce1cf4879a759eef431dd075d9a5dac";
+          sha256 = "6fd5a82f0785418fa8b698c0be2b1845dff92b77f1b3172c763d37868fb503d2";
         };
 
         beamDeps = [ decimal digital_token ex_cldr ex_cldr_currencies jason ];
@@ -593,7 +593,7 @@ let
 
     ex_cldr_plugs =
       let
-        version = "1.3.3";
+        version = "1.3.1";
       in
       buildMix {
         inherit version;
@@ -602,7 +602,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "ex_cldr_plugs";
-          sha256 = "23ebfa8d7a9991b71515c865ddf00099c9a23425767fb5dcbbca636df4aaeaab";
+          sha256 = "4f7b4a5fe061734cef7b62ff29118ed6ac72698cdd7bcfc97495db73611fe0fe";
         };
 
         beamDeps = [ ex_cldr gettext jason plug ];
@@ -807,7 +807,7 @@ let
 
     geo_postgis =
       let
-        version = "3.7.0";
+        version = "3.5.0";
       in
       buildMix {
         inherit version;
@@ -816,7 +816,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "geo_postgis";
-          sha256 = "e4e692c515d7d92381e7d0256f1bb7f8fe8760a254b7cd0c37a19c8f4a397904";
+          sha256 = "0bebc5b00f8b11835066bd6213fbeeec03704b4a1c206920b81c1ec2201d185f";
         };
 
         beamDeps = [ ecto geo jason postgrex ];
@@ -824,7 +824,7 @@ let
 
     geohax =
       let
-        version = "1.0.2";
+        version = "1.0.0";
       in
       buildMix {
         inherit version;
@@ -833,7 +833,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "geohax";
-          sha256 = "4c782de1e1ee781e2fa07ba6ebfbfb66b91c215b901073defe6196184b8b60a4";
+          sha256 = "893ef2f905213acb67c615d2c955d926b1be3676bfc2bd5ed7271b641dfa2224";
         };
       };
 
@@ -988,7 +988,7 @@ let
 
     hpax =
       let
-        version = "0.2.0";
+        version = "0.1.2";
       in
       buildMix {
         inherit version;
@@ -997,7 +997,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "hpax";
-          sha256 = "bea06558cdae85bed075e6c036993d43cd54d447f76d8190a8db0dc5893fa2f1";
+          sha256 = "2c87843d5a23f5f16748ebe77969880e29809580efdaccd615cd3bed628a8c13";
         };
       };
 
@@ -1393,7 +1393,7 @@ let
 
     phoenix_ecto =
       let
-        version = "4.6.1";
+        version = "4.4.3";
       in
       buildMix {
         inherit version;
@@ -1402,10 +1402,10 @@ let
         src = fetchHex {
           inherit version;
           pkg = "phoenix_ecto";
-          sha256 = "0ae544ff99f3c482b0807c5cec2c8289e810ecacabc04959d82c3337f4703391";
+          sha256 = "d36c401206f3011fefd63d04e8ef626ec8791975d9d107f9a0817d426f61ac07";
         };
 
-        beamDeps = [ ecto phoenix_html plug postgrex ];
+        beamDeps = [ ecto phoenix_html plug ];
       };
 
     phoenix_html =
@@ -1557,7 +1557,7 @@ let
 
     postgrex =
       let
-        version = "0.18.0";
+        version = "0.17.4";
       in
       buildMix {
         inherit version;
@@ -1566,7 +1566,7 @@ let
         src = fetchHex {
           inherit version;
           pkg = "postgrex";
-          sha256 = "a042989ba1bc1cca7383ebb9e461398e3f89f868c92ce6671feb7ef132a252d1";
+          sha256 = "6458f7d5b70652bc81c3ea759f91736c16a31be000f306d3c64bcdfe9a18b3cc";
         };
 
         beamDeps = [ db_connection decimal jason ];
