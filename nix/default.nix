@@ -12,7 +12,7 @@
 }:
 
 let
-  inherit (beamPackages) mixRelease buildMix;
+  inherit (beamPackages) mixRelease;
   common = callPackage ./common.nix { };
 in
 mixRelease rec {
@@ -53,11 +53,10 @@ mixRelease rec {
   };
 
   # Install the compiled js part
-  preBuild =
-    ''
-      cp -a "${mobilizon-frontend}/static" ./priv
-      chmod 770 -R ./priv
-    '';
+  preBuild = ''
+    cp -a "${mobilizon-frontend}/static" ./priv
+    chmod 770 -R ./priv
+  '';
 
   postBuild = ''
     mix phx.digest --no-deps-check

@@ -7,7 +7,7 @@ defmodule Mobilizon.Mixfile do
     [
       app: :mobilizon,
       version: @version,
-      elixir: "~> 1.16",
+      elixir: "~> 1.15",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: Mix.compilers(),
       xref: [exclude: [:eldap]],
